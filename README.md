@@ -72,12 +72,12 @@ Before running the script, ensure that the following dependencies are installed:
 ### Example:
 
 ```bash
-please enter youtube video link: https://www.youtube.com/watch?v=BtN-goy9VOY
+please enter youtube video link:  https://www.youtube.com/watch?v=D9tTi-CDjDU
 Extracting audio...
 Transcribing audio...
 Summarizing text...
 Summary of the video:
-This video explains the importance of self-awareness in personal growth. It discusses the benefits of reflection and how understanding one's strengths and weaknesses can lead to better decision-making and a more fulfilling life.
+Coronavirus are a group of viruses covered in little protein spikes that look like a crown or corona in Latin. Seven of them infect humans and can cause disease. Of the seven human coronaviruses, four cause colds, mild, highly contagious infections of the nose and throat. Two, infect the lungs and cause much more severe illnesses. The seventh, which causes COVID-19, has features of each. It spreads easily but can severely impact the lungs. It can infect a new person when the droplets containing the virus spray out. The slower mutation rate of coronavirus means our immune systems, drugs and vaccines might be able to recognize them for longer after infection, and therefore protect us better.
 ```
 
 ## How It Works
