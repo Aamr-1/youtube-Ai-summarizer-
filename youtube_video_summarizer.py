@@ -15,18 +15,18 @@ audio_file=BytesIO()
 
 def convert_to_audio(url):
     ydl_opts = {
-        'format': 'bestaudio/best',  # This chooses the best available audio format
-        'outtmpl': 'audio.%(ext)s',  # This defines the name of the output file (audio.mp3 or audio.webm)
-        'quiet': True,               # Suppress unnecessary output to make the process quieter
+        'format': 'bestaudio/best',           #parameters 
+        'outtmpl': 'audio.%(ext)s',  
+        'quiet': True,               
         'postprocessors': [{
-            'key': 'FFmpegExtractAudio',  # This tells yt-dlp to convert the downloaded audio file
-            'preferredcodec': 'mp3',  # Converts the audio to mp3 format (can be 'wav', 'aac', etc.)
-            'preferredquality': '192',  # Audio quality, you can adjust this to 128, 320, etc.
+            'key': 'FFmpegExtractAudio',  
+            'preferredcodec': 'mp3',  
+            'preferredquality': '192',  
         }]
         
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
-     # Extract video info (no download yet)
+                                               # Extract video info 
          meta_data = ydl.extract_info(url, download=False)
          process = subprocess.Popen(
             ['yt-dlp', '-f', 'bestaudio', '--extract-audio', '--audio-format', 'mp3', '-o', '-', url],
@@ -36,7 +36,7 @@ def convert_to_audio(url):
          audio_file.write(process.stdout.read()) 
          audio_file.seek(0)
 
-         # Save BytesIO content to a temp file
+         # Save bytesio content to a temp file
     with tempfile.NamedTemporaryFile(suffix=".mp3", delete=False) as temp_file:
             temp_file.write(audio_file.getvalue())
             temp_audio_path = temp_file.name
